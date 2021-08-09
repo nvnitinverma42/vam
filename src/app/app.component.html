@@ -1,0 +1,26 @@
+<h1>Vamstar Assignments</h1>
+
+<h3>Details of People </h3>
+
+<table>
+  <tr>
+    <th>Gender</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>Calculated</th>
+    <th>BMI Range</th>
+    <th>BMI Category</th>
+    <th>BMI Health Risk</th>
+
+
+  </tr>
+  <tr *ngFor="let d of jsonData">
+      <td><h5>{{d.Gender}}</h5></td>
+      <td><h5>{{d.HeightCm}}</h5></td>
+      <td><h5>{{d.WeightKg}}</h5></td>
+      <td><h5>{{getBmi(d.WeightKg,d.HeightCm)}} Kg/m2</h5></td>
+      <td><h5>{{bmiRange}} </h5></td>
+      <td><h5>{{bmiCalValue}} </h5></td>
+      <td><h5>{{bmiCategory}} </h5></td>
+  </tr>
+</table>
